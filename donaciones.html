@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e3c72;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px; /* Ancho máximo para ajustar el diseño */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .donation {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px; /* Espacio entre donaciones */
+            padding: 20px;
+            border: 1px solid #ddd; /* Borde de separación */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .donation h2 {
+            margin: 0 0 10px;
+            color: #1e3c72;
+        }
+
+        .donation .date {
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .donation .amount {
+            font-size: 1.2em;
+            color: #1e3c72;
+            margin: 10px 0;
+        }
+
+        .donation p {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .donation {
+                padding: 10px;
+            }
+
+            .donation h2 {
+                font-size: 1.2em;
+            }
+
+            .donation .amount {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/girlmir3a.jpg" alt="Imagen de fondo que muestra un paisaje" class="background-image">
+
+    <div class="container">
+        <h1>Donaciones</h1>
+
+        <!-- Donación 1 -->
+        <div class="donation">
+            <h2>Nombre del Donante 1</h2>
+            <p class="date">25 Ago 2024</p>
+            <p class="amount">$500</p>
+            <p>Descripción breve de la donación. Aquí puedes añadir detalles sobre la contribución del donante y cómo se usará.</p>
+        </div>
+
+        <!-- Donación 2 -->
+        <div class="donation">
+            <h2>Nombre del Donante 2</h2>
+            <p class="date">24 Ago 2024</p>
+            <p class="amount">$250</p>
+            <p>Descripción breve de la donación. Aquí puedes añadir detalles sobre la contribución del donante y cómo se usará.</p>
+        </div>
+
+        <!-- Donación 3 -->
+        <div class="donation">
+            <h2>Nombre del Donante 3</h2>
+            <p class="date">23 Ago 2024</p>
+            <p class="amount">$1000</p>
+            <p>Descripción breve de la donación. Aquí puedes añadir detalles sobre la contribución del donante y cómo se usará.</p>
+        </div>
+
+        <!-- Donación 4 -->
+        <div class="donation">
+            <h2>Nombre del Donante 4</h2>
+            <p class="date">22 Ago 2024</p>
+            <p class="amount">$750</p>
+            <p>Descripción breve de la donación. Aquí puedes añadir detalles sobre la contribución del donante y cómo se usará.</p>
+        </div>
+    </div>
+</body>
+
+</html>

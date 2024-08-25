@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e3c72;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px; /* Ancho máximo para ajustar la cuadrícula */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+            gap: 20px; /* Espacio entre los divs */
+        }
+
+        .news-item {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            padding: 20px;
+            color: #333;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .news-item h2 {
+            margin: 0;
+            color: #1e3c72;
+            font-size: 1.2em;
+        }
+
+        .news-item p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .news-item .date-time {
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        @media (max-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/girlmir3a.jpg" alt="Imagen de fondo que muestra un paisaje" class="background-image">
+
+    <div class="container">
+        <h1>Noticias</h1>
+        <div class="grid">
+            <!-- Noticia 1 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 1">
+                <h2>Título de la Noticia 1</h2>
+                <p class="date-time">25 Ago 2024 | 10:00 AM</p>
+                <p>Descripción breve de la noticia 1. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 2 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 2">
+                <h2>Título de la Noticia 2</h2>
+                <p class="date-time">24 Ago 2024 | 02:30 PM</p>
+                <p>Descripción breve de la noticia 2. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 3 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 3">
+                <h2>Título de la Noticia 3</h2>
+                <p class="date-time">23 Ago 2024 | 08:15 AM</p>
+                <p>Descripción breve de la noticia 3. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 4 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 4">
+                <h2>Título de la Noticia 4</h2>
+                <p class="date-time">22 Ago 2024 | 12:00 PM</p>
+                <p>Descripción breve de la noticia 4. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Añadir más noticias aquí -->
+            <!-- Noticia 5 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 5">
+                <h2>Título de la Noticia 5</h2>
+                <p class="date-time">21 Ago 2024 | 04:00 PM</p>
+                <p>Descripción breve de la noticia 5. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 6 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 6">
+                <h2>Título de la Noticia 6</h2>
+                <p class="date-time">20 Ago 2024 | 09:30 AM</p>
+                <p>Descripción breve de la noticia 6. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 7 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 7">
+                <h2>Título de la Noticia 7</h2>
+                <p class="date-time">19 Ago 2024 | 11:45 AM</p>
+                <p>Descripción breve de la noticia 7. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 8 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 8">
+                <h2>Título de la Noticia 8</h2>
+                <p class="date-time">18 Ago 2024 | 03:15 PM</p>
+                <p>Descripción breve de la noticia 8. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 9 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 9">
+                <h2>Título de la Noticia 9</h2>
+                <p class="date-time">17 Ago 2024 | 06:00 PM</p>
+                <p>Descripción breve de la noticia 9. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 10 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 10">
+                <h2>Título de la Noticia 10</h2>
+                <p class="date-time">16 Ago 2024 | 01:00 PM</p>
+                <p>Descripción breve de la noticia 10. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 11 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 11">
+                <h2>Título de la Noticia 11</h2>
+                <p class="date-time">15 Ago 2024 | 10:30 AM</p>
+                <p>Descripción breve de la noticia 11. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+            <!-- Noticia 12 -->
+            <div class="news-item">
+                <img src="https://via.placeholder.com/400x200" alt="Imagen noticia 12">
+                <h2>Título de la Noticia 12</h2>
+                <p class="date-time">14 Ago 2024 | 02:00 PM</p>
+                <p>Descripción breve de la noticia 12. Aquí puedes añadir detalles sobre el contenido de la noticia.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Funcionalidad aún no implementada.');
+            });
+        });
+    </script>
+</body>
+
+</html>

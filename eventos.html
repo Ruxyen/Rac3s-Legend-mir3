@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e3c72;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px; /* Ancho máximo para ajustar la cuadrícula */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .event {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px; /* Espacio entre eventos */
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd; /* Línea separadora */
+        }
+
+        .event img {
+            width: 200px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .event .content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .event .content h2 {
+            margin: 0 0 10px;
+            color: #1e3c72;
+        }
+
+        .event .content .date-time {
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .event .content p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .event .videos {
+            width: 200px; /* Ajusta el tamaño según sea necesario */
+            text-align: left;
+        }
+
+        .event .videos video {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1200px) {
+            .event {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .event img,
+            .event .videos {
+                width: 100%;
+                margin: 0;
+            }
+
+            .event .videos {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/girlmir3a.jpg" alt="Imagen de fondo que muestra un paisaje" class="background-image">
+
+    <div class="container">
+        <h1>Eventos</h1>
+
+        <!-- Evento 1 -->
+        <div class="event">
+            <img src="https://via.placeholder.com/200x200" alt="Imagen evento 1">
+            <div class="content">
+                <h2>Título del Evento 1</h2>
+                <p class="date-time">25 Ago 2024 | 10:00 AM</p>
+                <p>Descripción del evento 1. Aquí puedes añadir detalles sobre el contenido del evento.</p>
+            </div>
+            <div class="videos">
+                <video controls>
+                    <source src="https://www.example.com/video1.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <video controls>
+                    <source src="https://www.example.com/video2.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="event">
+            <img src="https://via.placeholder.com/200x200" alt="Imagen evento 2">
+            <div class="content">
+                <h2>Título del Evento 2</h2>
+                <p class="date-time">24 Ago 2024 | 02:30 PM</p>
+                <p>Descripción del evento 2. Aquí puedes añadir detalles sobre el contenido del evento.</p>
+            </div>
+            <div class="videos">
+                <video controls>
+                    <source src="https://www.example.com/video3.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <video controls>
+                    <source src="https://www.example.com/video4.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="event">
+            <img src="https://via.placeholder.com/200x200" alt="Imagen evento 3">
+            <div class="content">
+                <h2>Título del Evento 3</h2>
+                <p class="date-time">23 Ago 2024 | 08:15 AM</p>
+                <p>Descripción del evento 3. Aquí puedes añadir detalles sobre el contenido del evento.</p>
+            </div>
+            <div class="videos">
+                <video controls>
+                    <source src="https://www.example.com/video5.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <video controls>
+                    <source src="https://www.example.com/video6.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Evento 4 -->
+        <div class="event">
+            <img src="https://via.placeholder.com/200x200" alt="Imagen evento 4">
+            <div class="content">
+                <h2>Título del Evento 4</h2>
+                <p class="date-time">22 Ago 2024 | 12:00 PM</p>
+                <p>Descripción del evento 4. Aquí puedes añadir detalles sobre el contenido del evento.</p>
+            </div>
+            <div class="videos">
+                <video controls>
+                    <source src="https://www.example.com/video7.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <video controls>
+                    <source src="https://www.example.com/video8.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

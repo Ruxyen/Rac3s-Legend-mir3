@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            max-width: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 90%;
+            max-width: 800px; /* Ancho máximo para el contenedor */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .faq {
+            text-align: left;
+        }
+
+        .faq-item {
+            margin-bottom: 20px; /* Espacio entre preguntas */
+        }
+
+        .faq-item h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #1e3c72;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .faq-item h2::after {
+            content: '+';
+            position: absolute;
+            right: 10px;
+            font-size: 1.2em;
+            color: #1e3c72;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active h2::after {
+            content: '-';
+            transform: rotate(45deg);
+        }
+
+        .faq-item .answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .faq-item.active .answer {
+            display: block;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/girlmir3a.jpg" alt="Imagen de fondo que muestra un paisaje" class="background-image">
+
+    <div class="container">
+        <h1>Preguntas Frecuentes</h1>
+
+        <div class="faq">
+            <!-- Pregunta 1 -->
+            <div class="faq-item">
+                <h2>¿Cómo puedo contactarnos?</h2>
+                <div class="answer">
+                    <p>Puedes contactarnos a través de nuestra página de contacto o enviándonos un correo electrónico a info@example.com.</p>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="faq-item">
+                <h2>¿Cuáles son nuestros horarios de atención?</h2>
+                <div class="answer">
+                    <p>Estamos disponibles de lunes a viernes de 9:00 AM a 6:00 PM. Los fines de semana estamos cerrados.</p>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="faq-item">
+                <h2>¿Dónde estamos ubicados?</h2>
+                <div class="answer">
+                    <p>Nuestra oficina está ubicada en la Calle Ejemplo 123, Ciudad, País. Puedes ver la ubicación en el mapa de nuestra página web.</p>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="faq-item">
+                <h2>¿Ofrecen soporte técnico?</h2>
+                <div class="answer">
+                    <p>Sí, ofrecemos soporte técnico para nuestros productos. Puedes solicitar asistencia técnica a través de nuestro formulario de soporte en el sitio web.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-item h2').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e3c72;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px; /* Ancho máximo para ajustar la cuadrícula */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+            gap: 20px; /* Espacio entre las imágenes */
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/girlmir3a.jpg" alt="Imagen de fondo que muestra un paisaje" class="background-image">
+
+    <div class="container">
+        <h1>Galería de Imágenes</h1>
+
+        <div class="gallery">
+            <!-- Imagen 1 -->
+            <img src="https://via.placeholder.com/400x300" alt="Imagen 1">
+            <!-- Imagen 2 -->
+            <img src="https://via.placeholder.com/400x300" alt="Imagen 2">
+            <!-- Imagen 3 -->
+            <img src="https://via.placeholder.com/400x300" alt="Imagen 3">
+            <!-- Imagen 4 -->
+            <img src="https://via.placeholder.com/400x300" alt="Imagen 4">
+            <!-- Imagen 5 -->
+            <img src="https://via.placeholder.com/400x300" alt="Imagen 5">
+            <!-- Imagen 6 -->
+            <img src="https://via.placeholder.com/400x300" alt="Imagen 6">
+        </div>
+    </div>
+</body>
+
+</html>

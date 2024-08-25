@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionar PJ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e3c72; /* Color sólido de fondo */
+            font-family: Arial, sans-serif;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            max-width: 100%;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1e3c72;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2a5298;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/girlmir3a.jpg" alt="Fondo vertical" class="background-image"> <!-- Reemplaza con tu imagen -->
+    
+    <div class="container">
+        <h1>Cambiar Contraseña</h1>
+        <form id="loginForm">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" required>
+            
+            <label for="password">Password antigua</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password">Password nuevo</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password">Repetir password nuevo</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const id = document.getElementById('id').value;
+            const password = document.getElementById('password').value;
+            
+            if (id && password) {
+                console.log('ID:', id);
+                console.log('Password:', password);
+                alert('Formulario enviado con éxito!');
+            } else {
+                alert('Por favor, complete todos los campos.');
+            }
+        });
+    </script>
+</body>
+</html>
